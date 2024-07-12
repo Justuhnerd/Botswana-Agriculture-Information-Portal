@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources - Agricultural Information Portal</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <style>
+        .resource-section {
+            margin-bottom: 40px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background: rgba(0, 0, 0, 0.7); /* Adjust the opacity as needed */
+        }
+
+        .resource-section h3 {
+            margin-top: 0;
+        }
+
+        .resource-images {
+            display: flex;
+            gap: 300px;
+            margin: 20px 0;
+        }
+
+        .resource-images img {
+            width: 15%;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        .learn-more-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+            text-align: center; /* Centering the text */
+        }
+
+      
+
+        .learn-more-button:hover {
+            background-color: #218838;
+        }
+
+        @media (max-width: 768px) {
+            .resource-images {
+                overflow-x: scroll;
+                white-space: nowrap;
+            }
+
+            .resource-images img {
+                width: 200px; /* Adjust as needed for smaller size */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 id="logo"><a href="index.html"><span>Botswana</span> <span>Agricultural</span> <span>Information Portal</span></a></h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="modern-farming-techniques.html">Modern Farming Techniques</a></li>
+                    <li><a href="weather.html">Weather</a></li>
+                    <li><a href="market.html">Market Prices</a></li>
+                    <li><a href="success-stories.html">Success Stories</a></li>
+                    <li><a href="forum.html">Forum</a></li>
+                    <li><a href="resources.html" class="active">Resources</a></li>
+                </ul>
+                <form class="search-form" action="search.html" method="GET">
+                    <input type="text" name="query" placeholder="Search...">
+                    <button type="submit">Search</button>
+                </form>
+            </nav>
+        </div>
+    </header>
+
+  
+
+    <section id="agricultural-resources">
+        <div class="container">
+            <h2  style=" text-align: center; margin: 20px;
+">Agricultural Resources</h2>
+            
+            <!-- Agricultural Resources Conservation Act -->
+            <div class="resource-section">
+                <h3>Agricultural Resources Conservation Act</h3>
+              
+                <p>The Agricultural Resources Conservation Act of Botswana was passed in 1974 to establish the Agricultural Resources Board (ARB) and define its powers and functions. The act also provides for conservation committees and subordinate conservation committees, and defines agricultural resources as: soils, waters, plant life and vegetation, animal life and fauna, and vegetable products of the soil. 
+                    .</p>
+                <a href="https://botswanalaws.com/consolidated-statutes/principle-legislation/agricultural-resources-conservation" class="learn-more-button">Learn More</a>
+            </div>
+
+            <!-- National Plant Genetic Resources Unit (NPGRC) -->
+            <div class="resource-section">
+                <h3>National Plant Genetic Resources Unit (NPGRC)</h3>
+                <div class="resource-images">
+                    <img src="photos/largepreview.png" alt="Seed Collection">
+                    <img src="photos/images (1).png" alt="Cultivated Crops">
+                    <img src="photos/Molosiwa et al Figure 1.png" alt="Wild Plant Species">
+                </div>
+                <p>The National Plant Genetic Resources Unit (NPGRC) in Botswana collects and preserves seeds of cultivated crops, their wild relatives, and other useful wild plant species. The conserved plant genetic resources can be used to improve the quality and productivity of crops. The NPGRC stores gene bank accessions in chest freezers at -18°C for long-term conservation and also has a walk-in cold room for short-term storage. 
+                </p>
+                <a href="npgrc.html" class="learn-more-button">Learn More</a>
+            </div>
+
+            <!-- National Agricultural Research and Development Institute (NARDI) -->
+            <div class="resource-section">
+                <h3>National Agricultural Research and Development Institute (NARDI)</h3>
+                <div class="resource-images">
+                    <img src="photos/images (2).png" alt="Agricultural Research">
+                    <img src="photos/commersialization.jpg" alt="Research Technology">
+                    <img src="photos/lab-acreditation-scaled-600x348.jpg" alt="Research Institute">
+                </div>
+                <p>A Research Technology Organisation (RTO) under the Ministry of Agriculture (MoA) that was formed in 2015 to merge the operations of the Department of Agricultural Research (DAR), National Veterinary Laboratory (NVL), and National Food Technology Research Centre (NFTRC).By focusing on areas like crop development, animal health, and sustainable practices, NARDI helps improve agricultural yields, commercialization, and food security for the nation, all while promoting knowledge transfer and collaboration across the agricultural sector.</p>
+                <a href="https://www.nardi.org.bw/" class="learn-more-button">Learn More</a>
+            </div>
+
+            <!-- Ministry of Agricultural Development and Food Security -->
+            <div class="resource-section">
+                <h3>Ministry of Agricultural Development and Food Security</h3>
+                <div class="resource-images">
+                    <img src="photos/images (4).jpg" alt="Crop Production">
+                    <img src="photos/images (5).jpg" alt="Animal Production">
+                    <img src="photos/aeessss28046889698623_n.jpg" alt="Veterinary Services">
+                </div>
+                <p>Botswana's Ministry of Agricultural Development and Food Security captains the country's agricultural sector, charting a course towards food security. 
+                    They achieve this by driving increased local production, reducing reliance on imports and strengthening the national food supply.  The Ministry also fosters diversification of crops and livestock, ensuring resilience against fluctuations 
+                    in specific products. To empower farmers and create a more profitable agricultural industry, they promote value addition through initiatives that support processing and marketing of agricultural products.
+                     Recognizing the importance of long-term sustainability, the Ministry champions sustainable practices that conserve land and protect its productivity. Ultimately, their efforts aim to empower farmers, eradicate poverty through agriculture-based job creation and community development programs, and ensure a flourishing agricultural industry that contributes significantly to Botswana's economy.
+
+
+
+                </p>
+                <a href="ministry-agricultural-development-food-security.html" class="learn-more-button">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="resources">
+        <div class="container">
+            <h2>Additional Resources</h2>
+            <ul>
+                <li><a href="#">Modern Farming Techniques</a></li>
+                <li><a href="#">Government Resources</a></li>
+                <li><a href="#">Educational Materials</a></li>
+                <li><a href="#">Job Board</a></li>
+            </ul>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Agricultural Information Portal - Botswana. All rights reserved.</p>
+            <p><a href="contact.html">Contact Us</a> | <a href="privacy.html">Privacy Policy</a></p>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

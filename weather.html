@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather - Agricultural Information Portal</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            position: relative;
+            background: url('photos/CornField_Lead.jpg') no-repeat center center;
+            background-size: cover; /* Cover the entire background */
+            background-attachment: fixed; /* Fixed background position */
+            color: white;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
+            z-index: -1;
+        }
+
+        
+
+        header h1 a, nav ul li a, footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        nav ul li {
+            margin: 0 10px;
+        }
+
+        .active {
+            font-weight: bold;
+            text-decoration: underline;
+        }
+
+        .search-form {
+            display: flex;
+        }
+
+        .search-form input[type="text"] {
+            padding: 5px;
+            border: none;
+            border-radius: 5px 0 0 5px;
+        }
+
+        .search-form button {
+            padding: 5px 10px;
+            border: none;
+            background: #3498db;
+            color: white;
+            cursor: pointer;
+            border-radius: 0 5px 5px 0;
+        }
+
+        #weather h2 {
+            margin-bottom: 20px;
+        }
+
+        .forecast {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .forecast .day {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 10px;
+            text-align: center;
+        }
+
+        .forecast .day img {
+            max-width: 100px;
+            height: auto;
+        }
+
+        .forecast .day p {
+            margin: 10px 0;
+        }
+
+        .tomorrow {
+            width: 100%;
+            height: 200px;
+        }
+
+        .tomorrow a img {
+            width: 250px;
+            height: 18px;
+        }
+
+
+
+        /* Seasonal Crops Section Styles */
+#seasonal-crops ul {
+    list-style: none;
+    padding: 0;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#seasonal-crops ul li {
+    flex: 1 1 30%;
+    margin: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+#seasonal-crops h3 {
+    margin-top: 20px;
+    text-align: center;
+    color: white;
+}
+
+#seasonal-crops ul li p {
+    margin-top: 10px;
+    color: white;
+}
+
+#seasonal-crops ul li strong {
+    display: block;
+    margin-bottom: 5px;
+    color: white;
+}
+
+
+
+
+/* Animal Care Section Styles */
+#animal-care ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#animal-care ul li {
+    flex: 1 1 30%;
+    margin: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+#animal-care h3 {
+    margin-top: 20px;
+    text-align: center;
+    color: white;
+}
+
+#animal-care ul li p {
+    margin-top: 10px;
+    color: white;
+}
+
+#animal-care ul li strong {
+    display: block;
+    margin-bottom: 5px;
+    color: white;
+}
+
+
+#botswana-weather .container {
+            background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background color */
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        #botswana-weather h2,
+        #botswana-weather h3 {
+            color: white;
+        }
+
+        #botswana-weather p {
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        #botswana-weather ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        #botswana-weather ul li {
+            margin-bottom: 10px;
+            text-align: left;
+        }
+
+        @media (max-width: 768px) {
+            .tomorrow {
+            width: 100%;
+            height: 600px;
+        }
+
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 id="logo"><a href="index.html"><span>Botswana</span> <span>Agricultural</span> <span>Information Portal</span></a></h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="modern-farming-techniques.html">Modern Farming Techniques</a></li>
+                    <li><a href="weather.html" class="active">Weather</a></li>
+                    <li><a href="market.html">Market Prices</a></li>
+                    <li><a href="success-stories.html">Success Stories</a></li>
+                    <li><a href="forum.html">Forum</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                </ul>
+                <form class="search-form" action="search.html" method="GET">
+                    <input type="text" name="query" placeholder="Search...">
+                    <button type="submit">Search</button>
+                </form>
+            </nav>
+
+            <div class="menu-toggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div
+
+        </div>
+    </header>
+    <section id="weather">
+        <div class="container">
+            <h2>Weather Updates</h2>
+            <p>Get up-to-date weather forecasts and localized alerts.</p>
+            <div class="forecast">
+                <!-- Embed weather widget here -->
+                <script>
+                    (function(d, s, id) {
+                        if (d.getElementById(id)) {
+                            if (window.__TOMORROW__) {
+                                window.__TOMORROW__.renderWidget();
+                            }
+                            return;
+                        }
+                        const fjs = d.getElementsByTagName(s)[0];
+                        const js = d.createElement(s);
+                        js.id = id;
+                        js.src = "https://www.tomorrow.io/v1/widget/sdk/sdk.bundle.min.js";
+
+                        fjs.parentNode.insertBefore(js, fjs);
+                    })(document, 'script', 'tomorrow-sdk');
+                </script>
+
+                <div class="tomorrow"
+                    data-location-id="015735,2005635,015764,015737,015795,2005638"
+                    data-language="EN"
+                    data-unit-system="METRIC"
+                    data-skin="light"
+                    data-widget-type="aqi6"
+                    style="padding-bottom:22px;position:relative;"
+                >
+                    <a
+                        href="https://www.tomorrow.io/weather-api/"
+                        rel="nofollow noopener noreferrer"
+                        target="_blank"
+                        style="position: absolute; bottom: 0; transform: translateX(-50%); left: 50%;"
+                    >
+                        <img
+                            alt="Powered by the Tomorrow.io Weather API"
+                            src="https://weather-website-client.tomorrow.io/img/powered-by.svg"
+                            width="250"
+                            height="18"
+                        />
+                    </a>
+                </div>
+            </div>
+            <p>Stay updated with real-time weather information by checking our forecast regularly.</p>
+        </div>
+    </section>
+
+
+    <section id="botswana-weather">
+        <div class="container">
+            <h2>Weather Patterns in Botswana</h2>
+            <p>Explore the diverse weather patterns and climatic conditions across different regions of Botswana.</p>
+            
+            <h3>Climate Zones</h3>
+            <p>Botswana features a predominantly semi-arid climate with varying temperatures and precipitation levels across different regions.</p>
+            
+            <h3>Main Weather Patterns</h3>
+            <p>Botswana experiences distinct weather patterns influenced by its geographical location and topography:</p>
+            
+            <ul>
+                <li><strong>Kalahari Desert:</strong> The southwestern part of Botswana is characterized by arid conditions with hot summers and cool winters. Rainfall is sparse and highly variable.</li>
+                <li><strong>Okavango Delta:</strong> Northern Botswana experiences a subtropical climate with hot, wet summers and mild, dry winters. The annual flooding of the Okavango Delta significantly influences local weather patterns.</li>
+                <li><strong>Eastern Highlands:</strong> The eastern part of Botswana has a slightly cooler climate due to higher elevation, with more rainfall compared to other regions. Summers are warm, and winters are cool.</li>
+                <li><strong>Central Plateau:</strong> This region features a semi-arid climate with hot summers and mild winters. Rainfall is relatively low but more frequent compared to the desert areas.</li>
+            </ul>
+            
+            <h3>Seasonal Variations</h3>
+            <p>The seasons in Botswana can be categorized as follows:</p>
+            
+            <ul>
+                <li><strong>Summer (October to March):</strong> Hot and humid conditions prevail, with temperatures often exceeding 30°C (86°F) in many areas. Thunderstorms are common, especially in the northern regions.</li>
+                <li><strong>Winter (April to September):</strong> Dry and mild weather characterizes winter in Botswana. Daytime temperatures are generally warm, but nights can be cold, especially in desert areas where temperatures may drop below freezing.</li>
+            </ul>
+            
+            <h3>Extreme Weather Events</h3>
+            <p>Botswana occasionally experiences extreme weather events such as droughts and occasional floods, particularly in the Okavango Delta region during the rainy season.</p>
+            
+            <h3>Impact on Agriculture and Livestock</h3>
+            <p>The variability in Botswana's weather patterns poses challenges and opportunities for agriculture and livestock farming:</p>
+            
+            <ul>
+                <li><strong>Agriculture:</strong> Farmers must adapt to the semi-arid conditions by implementing water-saving techniques and choosing drought-resistant crops.</li>
+                <li><strong>Livestock:</strong> Proper management practices are essential to ensure animal welfare during hot, dry summers and cold, dry winters. Adequate shelter, water, and nutrition are critical.</li>
+            </ul>
+        </div>
+    </section>
+    
+
+    <section id="seasonal-crops">
+        <div class="container">
+            <h2>Seasonal Crops and Preparation Tips for Botswana</h2>
+            <p>Learn which crops are best suited for each season in Botswana and get tips on how to prepare for the upcoming season.</p>
+            
+            <ul>
+                <li>
+                    <h3>Spring (September to November)</h3>
+                    <p><strong>Crops:</strong> Lettuce, Spinach, Peas, Carrots</p>
+                    <p><strong>Tips:</strong> Start seeds indoors 4-6 weeks before the last frost date to get a head start on the growing season. Prepare soil by adding compost and organic matter to improve drainage and structure. Set up irrigation systems and ensure they are functioning properly. As the soil warms up, wait until it reaches at least 40°F (4°C) before transplanting seedlings outside. In Botswana, spring is a great time to plant cool-season crops that thrive in the cooler temperatures.</p>
+                </li>
+                <li>
+                    <h3>Summer (December to February)</h3>
+                    <p><strong>Crops:</strong> Tomatoes, Cucumbers, Peppers, Beans, Squash</p>
+                    <p><strong>Tips:</strong> Mulch around plants to retain soil moisture and suppress weeds. Water regularly, but avoid overwatering which can lead to disease and pests. Protect plants from pests using organic treatments like neem oil or insecticidal soap. Consider using row covers or trellises to support climbing plants like peas and beans. Botswana's summer is characterized by high temperatures and low humidity, so make sure to provide adequate shade for plants during the hottest part of the day.</p>
+                </li>
+                <li>
+                    <h3>Autumn (March to May)</h3>
+                    <p><strong>Crops:</strong> Broccoli, Cauliflower, Kale, Brussels Sprouts, Turnips</p>
+                    <p><strong>Tips:</strong> Extend the growing season by using row covers or cold frames to protect plants from frost. Harvest mature crops regularly to encourage continued production and prevent seed formation. Plant cover crops like rye or oats to enrich soil with nutrients and help prevent erosion. Consider succession planting every 2-3 weeks to ensure a continuous harvest. In Botswana's autumn, the temperature cools down, making it an ideal time to plant root vegetables like carrots and beets.</p>
+                </li>
+                <li>
+                    <h3>Winter (June to August)</h3>
+                    <p><strong>Crops:</strong> Garlic, Onions, Leeks, Spinach (in mild climates), Beets (in mild climates)</p>
+                    <p><strong>Tips:</strong> Use cold frames or greenhouses to extend the growing season and protect plants from frost. Insulate root crops like garlic and onions with straw or other mulch materials. Plan crop rotations for the next year by selecting crops that are well-suited for Botswana's winter conditions. In areas with mild winters, spinach and beets can be grown year-round.</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="animal-care">
+        <div class="container">
+            <h2>Animal Care for Farm Animals in Various Botswana Weather Conditions</h2>
+            <p>Learn how to care for farm animals in different weather conditions prevalent in Botswana.</p>
+            
+            <ul>
+                <li>
+                    <h3>Livestock</h3>
+                    <p><strong>Weather:</strong> Hot and Dry</p>
+                    <p><strong>Tips:</strong></p>
+                    <ul>
+                        <li>Provide plenty of shade and fresh water throughout the day.</li>
+                        <li>Ensure shelters are well-ventilated to allow for airflow.</li>
+                        <li>Monitor for signs of heat stress such as excessive panting and drooling.</li>
+                        <li>Consider using sprinklers or misting systems to cool animals during peak heat hours.</li>
+                        <li>Adjust feeding times to cooler parts of the day to minimize heat load.</li>
+                        <li>Keep salt blocks available to replace minerals lost through sweating.</li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>Small Stock (Goats, Sheep)</h3>
+                    <p><strong>Weather:</strong> Wet and Humid</p>
+                    <p><strong>Tips:</strong></p>
+                    <ul>
+                        <li>Ensure housing is clean, dry, and well-drained to prevent foot rot and fungal infections.</li>
+                        <li>Provide adequate ventilation to reduce humidity levels inside shelters.</li>
+                        <li>Monitor for signs of respiratory diseases and treat promptly with veterinary guidance.</li>
+                        <li>Adjust diet to account for lower activity levels and potential appetite changes during humid weather.</li>
+                        <li>Keep bedding dry and clean to minimize bacterial growth.</li>
+                        <li>Check hooves regularly and trim as needed to prevent overgrowth and disease.</li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>Pigs</h3>
+                    <p><strong>Weather:</strong> Hot and Humid</p>
+                    <p><strong>Tips:</strong></p>
+                    <ul>
+                        <li>Provide access to mud wallows or shallow pools of water for cooling off.</li>
+                        <li>Ensure shade is available throughout the day, especially during peak sun hours.</li>
+                        <li>Monitor pigs for signs of heat stress such as lethargy and reduced appetite.</li>
+                        <li>Keep housing clean and dry to prevent bacterial infections and skin diseases.</li>
+                        <li>Adjust feeding schedules to cooler times of the day to encourage eating.</li>
+                        <li>Provide a balanced diet with adequate water intake to maintain hydration.</li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>Donkeys and Horses</h3>
+                    <p><strong>Weather:</strong> Hot and Dry</p>
+                    <p><strong>Tips:</strong></p>
+                    <ul>
+                        <li>Ensure access to shade throughout the day, especially during midday heat.</li>
+                        <li>Provide ample fresh water and consider adding electrolytes to prevent dehydration.</li>
+                        <li>Monitor for signs of heat exhaustion such as excessive sweating and rapid breathing.</li>
+                        <li>Limit strenuous activities to cooler parts of the day to avoid heat stress.</li>
+                        <li>Check hooves regularly for cracks and signs of infection, especially in dry conditions.</li>
+                        <li>Provide a balanced diet with additional roughage to aid digestion and prevent colic.</li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>Fish</h3>
+                    <p><strong>Weather:</strong> Variable (depends on species)</p>
+                    <p><strong>Tips:</strong></p>
+                    <ul>
+                        <li>Maintain water quality through regular monitoring and filtration systems.</li>
+                        <li>Protect ponds from extreme temperatures by providing shade or adjusting water depth.</li>
+                        <li>Adjust feeding schedules based on water temperature and fish activity.</li>
+                        <li>Monitor for signs of stress such as reduced feeding behavior or abnormal swimming patterns.</li>
+                        <li>Provide appropriate aeration systems to ensure sufficient oxygen levels in the water.</li>
+                        <li>Consider species-specific needs for temperature tolerance and habitat requirements.</li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>Bees</h3>
+                    <p><strong>Weather:</strong> Hot and Dry</p>
+                    <p><strong>Tips:</strong></p>
+                    <ul>
+                        <li>Provide water sources near hives during hot weather to prevent dehydration.</li>
+                        <li>Ensure hives are well-ventilated to maintain airflow and regulate hive temperature.</li>
+                        <li>Monitor hive entrances for signs of overheating or stress among bees.</li>
+                        <li>Plant flowering plants to ensure a steady nectar supply for bees during dry spells.</li>
+                        <li>Protect hives from direct sunlight and excessive heat to maintain hive health.</li>
+                        <li>Inspect hives regularly for pests and diseases, particularly during dry conditions.</li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>Dogs and Cats</h3>
+                    <p><strong>Weather:</strong> Hot and Dry</p>
+                    <p><strong>Tips:</strong></p>
+                    <ul>
+                        <li>Provide cool, shaded areas for pets to rest during the hottest parts of the day.</li>
+                        <li>Ensure pets have access to fresh water at all times and keep water bowls in shaded areas.</li>
+                        <li>Avoid exercising pets during peak heat hours to prevent heatstroke and dehydration.</li>
+                        <li>Never leave pets in parked vehicles, even for short periods, as temperatures can quickly rise to dangerous levels.</li>
+                        <li>Provide pets with cool bedding or mats to lie on, and consider using fans or air conditioning to keep indoor temperatures comfortable.</li>
+                        <li>Monitor pets for signs of heat stress such as excessive panting, drooling, or lethargy, and seek veterinary attention if necessary.</li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>Poultry</h3>
+                    <p><strong>Weather:</strong> Cold and Dry</p>
+                    <p><strong>Tips:</strong></p>
+                    <ul>
+                        <li>Ensure poultry housing is well-insulated and draft-free to retain warmth.</li>
+                        <li>Provide additional bedding to keep birds comfortable and protect their feet from cold surfaces.</li>
+                        <li>Monitor water sources to prevent freezing and ensure birds have access to unfrozen water at all times.</li>
+                        <li>Adjust feeding schedules to provide extra calories during cold weather to maintain body heat.</li>
+                        <li>Check birds regularly for signs of respiratory illness or frostbite, especially on combs and wattles.</li>
+                        <li>Consider using heat lamps or heating pads in poultry housing, ensuring they are safely positioned and monitored.</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </section>
+    
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Agricultural Information Portal - Botswana. All rights reserved.</p>
+            <p><a href="contact.html">Contact Us</a> | <a href="privacy.html">Privacy Policy</a></p>
+        </div>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>

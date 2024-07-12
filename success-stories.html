@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success Stories - Agricultural Information Portal</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <style>
+        .story {
+            margin-bottom: 40px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background: rgba(0, 0, 0, 0.9); /* Adjust the opacity as needed */
+        }
+
+        .story h3 {
+            margin-top: 0;
+        }
+
+        .story-images {
+            display: flex;
+            gap: 10px;
+            margin: 20px 0;
+        }
+
+        .story-images img {
+            width: 32%;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        .learn-more-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+            text-align: center; /* Centering the text */
+        }
+
+        .learn-more-button:hover {
+            background-color: #218838;
+        }
+
+        /* Styling for the submit story section */
+        #submit-story {
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 5px;
+            background: rgba(0, 0, 0, 0.9); /* Adjust the opacity as needed */
+            text-align: center; /* Centering the text */
+        }
+
+        #submit-story h2 {
+            margin-top: 0;
+        }
+
+        #submit-story p {
+            line-height: 1.6;
+            margin-bottom: 0;
+        }
+
+        #submit-story a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        #submit-story a:hover {
+            text-decoration: underline;
+        }
+
+        #success-stories {
+            margin: 100px;
+        }
+
+        @media (max-width: 768px) {
+            #success-stories {
+                margin: 20px; /* Reduce the margin for mobile view */
+                padding: 10px; /* Add padding for better readability */
+            }
+
+            .story-images {
+                overflow-x: auto; /* Enable horizontal scroll */
+                display: flex;
+            }
+
+            .story-images img {
+                width: 70%; /* Make images smaller for mobile view */
+                min-width: 50px; /* Ensure a minimum width for images */
+                flex-shrink: 0; /* Prevent images from shrinking */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 id="logo"><a href="index.html"><span>Botswana</span> <span>Agricultural</span> <span>Information Portal</span></a></h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="modern-farming-techniques.html">Modern Farming Techniques</a></li>
+                    <li><a href="weather.html">Weather</a></li>
+                    <li><a href="market.html">Market Prices</a></li>
+                    <li><a href="success-stories.html" class="active">Success Stories</a></li>
+                    <li><a href="forum.html">Forum</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                </ul>
+                <form class="search-form" action="search.html" method="GET">
+                    <input type="text" name="query" placeholder="Search...">
+                    <button type="submit">Search</button>
+                </form>
+            </nav>
+            <div class="menu-toggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+    </header>
+
+    <section id="success-stories" style="text-align: center;">
+        <div class="container">
+            <h2>Success Stories</h2>
+            <p>Be inspired by stories of successful farmers using modern techniques.</p>
+    
+            <!-- Thabo's Story -->
+            <div class="story">
+                <h3>Thandi's Maize Farm in Serowe</h3>
+                <div class="story-images">
+                    <img src="photos/thaboarc614x376_w1200.jpg" alt="Thabo's maize farm">
+                    <img src="photos/irrigjpg.jpg" alt="Drip irrigation system">
+                    <img src="photos/Harvest_13.original.jpg" alt="Maize harvest">
+                </div>
+                <p>Thandi, a dedicated farmer from Serowe, struggled for years with low maize yields due to erratic weather patterns. Determined to improve, Thandi attended a workshop on modern farming techniques organized by the Agricultural Information Portal in January 2023. She learned about precision agriculture and how to utilize weather data for better crop management. Using the portal's weather updates and precision farming tips, Thandi implemented drip irrigation and adopted a soil health monitoring system in March 2023. She also started rotating her crops to maintain soil fertility. By March 2024, Thandi's maize yields had doubled, providing enough surplus to sell in the local market. Thandi's success story inspired other farmers in Serowe to adopt modern techniques. Her farm became a model for sustainable farming practices, and Thandi now mentors young farmers, helping them achieve similar success.</p>
+                <a href="thabo-story.html" class="learn-more-button">Learn More</a>
+            </div>
+    
+            <!-- Naledi's Story -->
+            <div class="story">
+                <h3>Naledi's Organic Vegetable Garden in Maun</h3>
+                <div class="story-images">
+                    <img src="photos/nalediscaled.jpg" alt="Naledi's organic garden">
+                    <img src="photos/170051662497b02453f2e13cd034c1d9--garden-compost-garden-soil21_large.jpg" alt="Composting process">
+                    <img src="photos/c80a7d53de114f448cb7cd45afefc932.jpg" alt="Fresh vegetables">
+                </div>
+                <p>Naledi, a young entrepreneur from Maun, wanted to start an organic vegetable garden. However, she faced challenges with pest management and soil quality. She turned to the Agricultural Information Portal for guidance and found extensive resources on organic farming techniques. With the portal's information, Naledi began composting to enrich her soil and used natural pest repellents. She also planted a variety of vegetables to ensure a continuous harvest throughout the year. The portal's expert chat feature provided her with real-time advice whenever she encountered issues. Naledi's organic garden flourished, and she began supplying fresh vegetables to local restaurants and markets. Her commitment to organic farming not only brought her financial success but also promoted healthy eating in her community. Naledi's story encouraged other farmers in Maun to consider organic practices.</p>
+                <a href="naledi-story.html" class="learn-more-button">Learn More</a>
+            </div>
+    
+            <!-- Kgosi's Story -->
+            <div class="story">
+                <h3>Kgosi's Livestock Farm in Ghanzi</h3>
+                <div class="story-images">
+                    <img src="photos/images.jpg" alt="Kgosi's cattle">
+                    <img src="photos/Cattle Comfort Strategy Realized Using Rotational Grazing.jpg" alt="Rotational grazing">
+                    <img src="photos/cattle-market-7.jpeg" alt="Cattle market">
+                </div>
+                <p>Kgosi, a cattle farmer in Ghanzi, struggled with livestock health and market prices. He discovered the Agricultural Information Portal and started using its resources to improve his farming methods. Kgosi learned about better livestock management practices and how to monitor market trends. Kgosi implemented rotational grazing to maintain pasture quality and used the portal's real-time market information to decide the best times to sell his cattle. He also attended online webinars on livestock health and nutrition. Kgosi's cattle health improved, leading to higher quality meat and better market prices. He increased his income significantly and invested in expanding his farm. Kgosi's success story motivated other livestock farmers in Ghanzi to utilize modern farming techniques and market insights.</p>
+                <a href="kgosi-story.html" class="learn-more-button">Learn More</a>
+            </div>
+
+            <!-- Dineo's Story -->
+            <div class="story">
+                <h3>Dineo's Poultry Farm in Francistown</h3>
+                <div class="story-images">
+                    <img src="photos/hq720.jpg" alt="Dineo's poultry farm">
+                    <img src="photos/bbbbs (1).jpg" alt="Automated feeding system">
+                    <img src="photos/Magggie Mokgosho.jpg" alt="Egg production">
+                </div>
+                <p>Dineo, an innovative farmer in Francistown, faced challenges with high mortality rates in her poultry due to inconsistent feeding and disease outbreaks. She turned to the Agricultural Information Portal for solutions and discovered the benefits of automated feeding systems and biosecurity measures. Dineo invested in an automated feeding system that ensured her chickens received consistent nutrition. She also implemented strict biosecurity protocols to prevent disease. With these changes, her poultry's health improved significantly, leading to higher egg production and lower mortality rates. Dineo's success in poultry farming has made her a role model in Francistown, and she now conducts workshops to share her knowledge with other poultry farmers.</p>
+                <a href="dineo-story.html" class="learn-more-button">Learn More</a>
+            </div>
+
+            <!-- Keabetswe's Story -->
+            <div class="story">
+                <h3>Keabetswe's Dairy Farm in Lobatse</h3>
+                <div class="story-images">
+                    <img src="photos/download.jpg" alt="Keabetswe's dairy farm">
+                    <img src="photos/ed1b50b1145e46c788e314e6544ec710.jpeg" alt="Milking process">
+                    <img src="photos/images (1).jpg" alt="Dairy products">
+                </div>
+                <p>Keabetswe, a dairy farmer in Lobatse, struggled with low milk yields and high production costs. Seeking help, she utilized the Agricultural Information Portal to learn about advanced dairy farming techniques. The portal provided insights into improving cattle nutrition and herd management. Keabetswe implemented a balanced feeding program and invested in a modern milking system. These changes increased her milk production and reduced labor costs. Keabetswe also began producing value-added dairy products like cheese and yogurt, which she sold at local markets. Her dairy farm's transformation has inspired other farmers in Lobatse to adopt better farming practices, leading to a more vibrant local dairy industry.</p>
+                <a href="keabetswe-story.html" class="learn-more-button">Learn More</a>
+            </div>
+
+            <!-- Mpho's Story -->
+            <div class="story">
+                <h3>Mpho's Fish Farm in Kasane</h3>
+                <div class="story-images">
+                    <img src="photos/images (2).jpg" alt="Mpho's fish farm">
+                    <img src="photos/images (3).jpg" alt="Aquaponics system">
+                    <img src="photos/Project1-1.jpg" alt="Harvesting fish">
+                </div>
+                <p>Mpho, a resourceful entrepreneur in Kasane, wanted to start a fish farm to provide fresh fish to her community. She faced challenges with water management and sustainable practices. Using the Agricultural Information Portal, Mpho learned about aquaponics, a system that combines fish farming and hydroponic plant cultivation. She set up an aquaponics system, which allowed her to efficiently use water and grow vegetables alongside fish. This innovative approach not only provided a steady supply of fresh fish but also vegetables for the local market. Mpho's fish farm has become a successful and sustainable business model in Kasane, inspiring others to explore aquaponics and sustainable farming methods.</p>
+                <a href="mpho-story.html" class="learn-more-button">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="submit-story">
+        <div class="container">
+            <h2>Submit Your Success Story</h2>
+            <p>We love to hear and share stories of success from our community. If you have a success story to share, please visit our <a href="contact.html">Contact Us</a> page and tell us all about it!</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Agricultural Information Portal - Botswana. All rights reserved.</p>
+            <p><a href="contact.html">Contact Us</a> | <a href="privacy.html">Privacy Policy</a></p>
+        </div>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>

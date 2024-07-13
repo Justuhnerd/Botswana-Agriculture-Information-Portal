@@ -6,26 +6,60 @@
     <title>Resources - Agricultural Information Portal</title>
     <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
     <style>
+
+body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            position: relative;
+            background-size: cover; /* Cover the entire background */
+            background-attachment: fixed; /* Fixed background position */
+            color: white;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
+            z-index: -1;
+        }
+
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
         .resource-section {
             margin-bottom: 40px;
+            width: 90%;
             padding: 20px;
             border: 1px solid #ddd;
             border-radius: 8px;
-            background: rgba(0, 0, 0, 0.7); /* Adjust the opacity as needed */
+            background: rgba(0, 0, 0, 0.9); /* Adjust the opacity as needed *//
         }
 
         .resource-section h3 {
             margin-top: 0;
         }
 
+
         .resource-images {
             display: flex;
-            gap: 300px;
+            gap: 10px;
             margin: 20px 0;
         }
 
         .resource-images img {
-            width: 15%;
+            width: 32%;
             border-radius: 8px;
             object-fit: cover;
         }
@@ -40,6 +74,7 @@
             border-radius: 4px;
             transition: background-color 0.3s;
             text-align: center; /* Centering the text */
+
         }
 
       
@@ -58,6 +93,59 @@
                 width: 200px; /* Adjust as needed for smaller size */
             }
         }
+
+
+         /* Additional Resources Section Styles */
+         #resources {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+
+        }
+
+        #resources .container {
+            text-align: center;
+            color: white;
+        }
+
+        #resources ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        #resources ul li {
+            flex: 1 1 30%;
+            margin: 10px;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        #resources ul li img {
+            max-width: 250px; /* Set a fixed width for the images */
+            height: auto;
+            border-radius: 10px;
+        }
+
+        #resources ul li h3 {
+            margin-top: 10px;
+        }
+
+        #resources ul li p {
+            margin-top: 10px;
+        }
+
+        img:hover {
+            transform: scale(1.2);
+            transition: transform 0.5s ease-in-out;
+        }
+
+        
     </style>
 </head>
 <script src="//code.tidio.co/hjoubs9y7qqhjio5sdcmzzoobzii2fdq.js" async></script>
@@ -109,7 +197,7 @@
                 <h3>National Plant Genetic Resources Unit (NPGRC)</h3>
                 <div class="resource-images">
                     <img src="photos/largepreview.png" alt="Seed Collection">
-                    <img src="photos/images (1).png" alt="Cultivated Crops">
+                    <img src="photos/gene.png" alt="Cultivated Crops">
                     <img src="photos/Molosiwa et al Figure 1.png" alt="Wild Plant Species">
                 </div>
                 <p>The National Plant Genetic Resources Unit (NPGRC) in Botswana collects and preserves seeds of cultivated crops, their wild relatives, and other useful wild plant species. The conserved plant genetic resources can be used to improve the quality and productivity of crops. The NPGRC stores gene bank accessions in chest freezers at -18°C for long-term conservation and also has a walk-in cold room for short-term storage. 
@@ -142,11 +230,36 @@
                     in specific products. To empower farmers and create a more profitable agricultural industry, they promote value addition through initiatives that support processing and marketing of agricultural products.
                      Recognizing the importance of long-term sustainability, the Ministry champions sustainable practices that conserve land and protect its productivity. Ultimately, their efforts aim to empower farmers, eradicate poverty through agriculture-based job creation and community development programs, and ensure a flourishing agricultural industry that contributes significantly to Botswana's economy.
 
-
-
                 </p>
                 <a href="ministry-agricultural-development-food-security.html" class="learn-more-button">Learn More</a>
             </div>
+
+            <div class="resource-section">
+                <h3>Local Enterprise Authority
+                </h3>
+                <div class="resource-images">
+                    <img src="photos/lea (3).png" alt="Agricultural Research">
+                    <img src="photos/welcome.jpg" alt="Research Technology">
+                    <img src="photos/agriculture.jpg" alt="Research Institute">
+                </div>
+                <p>The Local Enterprise Authority (LEA) has formulated new strategies aimed at enhancing food security and employment rate which have dogged the country for quite some time now. LEA is also mobilising a batch of prospective farmers to impart new technologies earned from off-shore to fill the gap.
+                </p>
+                <a href="https://www.lea.co.bw/" class="learn-more-button">Learn More</a>
+            </div>
+
+            <div class="resource-section">
+                <h3>Citizen Entrepreneurial Development Agency
+                </h3>
+                <div class="resource-images">
+                    <img src="photos/cedaa67.jpg" alt="Agricultural Research">
+                    <img src="photos/Kae_Kapa_Kae_landing_page-14.png" alt="Research Technology">
+                    <img src="photos/Kae_Kapa_Kae_landing_page-15.png" alt="Research Institute">
+                </div>
+                <p>CEDA provides subsidized loans for various sub sectors within Agribusiness to enable citizen participation in sustainable agricultural activities. The Agribusiness Sector has two offerings; Agribusiness Mainline Funding and Young Farmers Fund.
+                </p>
+                <a href="https://www.nardi.org.bw/" class="learn-more-button">Learn More</a>
+            </div>
+
         </div>
     </section>
 
@@ -154,10 +267,10 @@
         <div class="container">
             <h2>Additional Resources</h2>
             <ul>
-                <li><a href="#">Modern Farming Techniques</a></li>
+                <li><a href="modern-farming-techniques.html">Modern Farming Techniques</a></li>
                 <li><a href="#">Government Resources</a></li>
-                <li><a href="#">Educational Materials</a></li>
-                <li><a href="#">Job Board</a></li>
+                <li><a href="https://www.agfoundation.org/resources/sustainable-agriculture">Educational Materials</a></li>
+                <li><a href="https://www.botswajob.com/recruitment-agriculture">Job Board</a></li>
             </ul>
         </div>
     </section>

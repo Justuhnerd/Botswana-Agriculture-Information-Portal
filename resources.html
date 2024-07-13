@@ -95,55 +95,62 @@ body {
         }
 
 
-         /* Additional Resources Section Styles */
-         #resources {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: white;
+       /* Additional Resources Section Styles */
+#resources {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-        }
+#resources .container {
+    text-align: center;
+    color: white;
+}
 
-        #resources .container {
-            text-align: center;
-            color: white;
-        }
+#resources ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
 
-        #resources ul {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-        }
+#resources ul li {
+    flex: 1 1 30%;
+    margin: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+}
 
-        #resources ul li {
-            flex: 1 1 30%;
-            margin: 10px;
-            background: rgba(0, 0, 0, 0.7);
-            border-radius: 10px;
-            padding: 20px;
-            text-align: center;
-        }
+#resources ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
 
-        #resources ul li img {
-            max-width: 250px; /* Set a fixed width for the images */
-            height: auto;
-            border-radius: 10px;
-        }
+#resources ul li a:hover {
+    color: #28a745; /* Change color on hover */
+}
 
-        #resources ul li h3 {
-            margin-top: 10px;
-        }
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
 
-        #resources ul li p {
-            margin-top: 10px;
-        }
+footer a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
 
-        img:hover {
-            transform: scale(1.2);
-            transition: transform 0.5s ease-in-out;
-        }
+footer a:hover {
+    color: #28a745; /* Change color on hover */
+}
+
 
         
     </style>
@@ -181,7 +188,8 @@ body {
     <section id="agricultural-resources">
         <div class="container">
             <h2  style=" text-align: center; margin: 20px;
-">Agricultural Resources</h2>
+">
+Agricultural Resources</h2>
             
             <!-- Agricultural Resources Conservation Act -->
             <div class="resource-section">

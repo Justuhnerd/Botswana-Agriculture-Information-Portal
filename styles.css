@@ -406,7 +406,6 @@ logo# a:hover {
 }
 
     
-}
 
 section {
     padding: 20px 0;
@@ -424,7 +423,6 @@ footer {
 }
 
 footer .container {
-    font-size: 20px;
     color: #ccc;
     padding: 0px 0;
 }
@@ -446,7 +444,6 @@ footer a:hover {
 
 .developer-contact h3 {
     color: white;
-    font-size: 16px;
     margin-bottom: 10px;
 }
 
@@ -470,4 +467,3 @@ form button {
 
 
 
-}

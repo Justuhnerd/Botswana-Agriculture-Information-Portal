@@ -30,15 +30,19 @@ Below is an overview of the files and directories included in this repository:
 - **Latest Commit**: The most recent update involved adding a footer across multiple pages (`footer 39164db`).
 - **Feature Additions**: A chatbot was installed to enhance user interaction and provide instant support.
 
+Your README section looks well-structured! Here’s the complete version:
+
+---
+
 ## How to Run the Project
 
 1. **Clone the Repository**:
     ```bash
-git clone https://github.com/Justuhnerd/Botswana-Agriculture-Information-Portal.git
+    git clone https://github.com/Justuhnerd/Botswana-Agriculture-Information-Portal.git
     ```
 2. **Navigate to the Project Directory**:
     ```bash
-cd Botswana-Agriculture-Information-Portal
+    cd Botswana-Agriculture-Information-Portal
     ```
 3. **Open the `index.html` file in your preferred browser** to view the portal.
 
@@ -52,8 +56,12 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Contact
 
-For inquiries or support, please reach out via the [contact page](contact.html) on the portal or email us at [theohmasoko2@gmail.com].
+For inquiries or support, please reach out via the [contact page](contact.html) on the portal or email us at [theohmasoko2@gmail.com](mailto:theohmasoko2@gmail.com).
 
 ---
 
 Thank you for checking out the Agricultural Information Portal!
+
+---
+
+This README should provide clear instructions for users and contributors. Let me know if you need any more details!

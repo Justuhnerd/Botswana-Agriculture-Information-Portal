@@ -34,11 +34,11 @@ Below is an overview of the files and directories included in this repository:
 
 1. **Clone the Repository**:
     ```bash
-    git clone https://github.com/theomasoko/agricultural-portal.git
+git clone https://github.com/Justuhnerd/Botswana-Agriculture-Information-Portal.git
     ```
 2. **Navigate to the Project Directory**:
     ```bash
-    cd agricultural-portal
+cd Botswana-Agriculture-Information-Portal
     ```
 3. **Open the `index.html` file in your preferred browser** to view the portal.
 

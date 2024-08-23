@@ -6,8 +6,7 @@
     <title>Forum - Agricultural Information Portal</title>
     <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
     <style>
-         
-         body {
+        body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
@@ -85,79 +84,293 @@
         .btn:hover {
             background-color: #45a049;
         }
+
+        .advertisement {
+            border: 2px solid #4CAF50; /* Green border */
+            flex: 1 1 30%;
+            padding: 10px;
+            margin: 15px 0;
+            background-color: #f9f9f9; /* Light gray background */
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        }
+
+        .advertisement img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 8px;
+        }
+
+        .comment-section {
+            margin-top: 20px;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 8px;
+        }
+
+        .comment-section h4 {
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
+
+        .comment-section textarea {
+            width: 100%;
+            padding: 10px;
+            border-radius: 4px;
+            border: none;
+            margin-bottom: 10px;
+        }
+
+        .comment-section .btn-comment {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .comment-section .btn-comment:hover {
+            background-color: #45a049;
+        }
+
+        .likes {
+            margin-top: 10px;
+        }
+
+        .likes button {
+            background: none;
+            border: none;
+            color: #ffffff;
+            font-size: 1.2rem;
+            cursor: pointer;
+            padding: 0;
+        }
+
+        .likes span {
+            margin-left: 5px;
+            font-size: 1.2rem;
+        }
     </style>
 </head>
 <script src="//code.tidio.co/hjoubs9y7qqhjio5sdcmzzoobzii2fdq.js" async></script>
 <body>
-    <header>
-        <div class="container">
-            <h1 id="logo"><a href="index.html"><span>Botswana</span> <span>Agricultural</span> <span>Information Portal</span></a></h1>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="modern-farming-techniques.html">Modern Farming Techniques</a></li>
-                    <li><a href="weather.html">Weather</a></li>
-                    <li><a href="market.html">Market Prices</a></li>
-                    <li><a href="success-stories.html">Success Stories</a></li>
-                    <li><a href="forum.html" class="active">Forum</a></li>
-                    <li><a href="resources.html">Resources</a></li>
-                </ul>
-                <form class="search-form" action="search.html" method="GET">
-                    <input type="text" name="query" placeholder="Search...">
-                    <button type="submit">Search</button>
-                </form>
-            </nav>
+<header>
+    <div class="container">
+        <h1 id="logo"><a href="index.html"><span>Botswana</span> <span>Agricultural</span> <span>Information Portal</span></a></h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="modern-farming-techniques.html">Modern Farming Techniques</a></li>
+                <li><a href="weather.html">Weather</a></li>
+                <li><a href="market.html">Market Prices</a></li>
+                <li><a href="success-stories.html">Success Stories</a></li>
+                <li><a href="forum.html" class="active">Forum</a></li>
+                <li><a href="resources.html">Resources</a></li>
+            </ul>
+            <form class="search-form" action="search.html" method="GET">
+                <input type="text" name="query" placeholder="Search...">
+                <button type="submit">Search</button>
+            </form>
         </nav>
         <div class="menu-toggle">
             <div class="bar"></div>
             <div class="bar"></div>
             <div class="bar"></div>
         </div>
+    </div>
+</header>
+
+<section id="forum">
+    <div class="container">
+        <h2>Community Forum</h2>
+        <p style="text-align: center;">Join our Q&A forum and connect with other farmers.</p>
+
+        <!-- Advertisement Section -->
+        <div class="advertisement">
+            <a href="#">
+                <img src="photos/ad-banner2.jpg" alt="Advertisement">
+            </a>
         </div>
-    </header>
 
-    <section id="forum">
-        <div class="container">
-            <h2>Community Forum</h2>
-            <p style="text-align: center;
-">Join our Q&A forum and connect with other farmers.</p>
+        <div class="forum-topic">
+            <h3>Best practices for tomato cultivation</h3>
+            <p>I'm looking for advice on improving tomato yield in a humid climate. Any tips?</p>
+            <p class="meta">Posted by FarmerJane on July 10, 2024</p>
 
-            <div class="forum-topic">
-                <h3>Best practices for tomato cultivation</h3>
-                <p>I'm looking for advice on improving tomato yield in a humid climate. Any tips?</p>
-                <p class="meta">Posted by FarmerJane on July 10, 2024</p>
-            </div>
+            <!-- Comment Section -->
+            <div class="comment-section">
+                <h4>Comments</h4>
+                <textarea rows="3" placeholder="Add a comment..."></textarea>
+                <button class="btn-comment">Submit Comment</button>
 
-            <div class="forum-topic">
-                <h3>Dealing with pests in maize fields</h3>
-                <p>We're struggling with armyworms attacking our maize. What's the most effective pesticide to use?</p>
-                <p class="meta">Posted by FarmerJohn on July 9, 2024</p>
-            </div>
-
-            <div class="forum-topic">
-                <h3>Water management techniques for small farms</h3>
-                <p>Seeking advice on efficient irrigation methods for small-scale farming operations.</p>
-                <p class="meta">Posted by SmallFarmBigDreams on July 8, 2024</p>
-            </div>
-
-            <a href="#" class="btn">Visit Forum</a>
-        </div>
-    </section>
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Agricultural Information Portal - Botswana. All rights reserved.</p>
-            <p><a href="privacy.html">Privacy Policy</a></p>
-            <div class="developer-contact">
-                <h3>Developer Contact Details</h3>
-                <p>Names: Theo Masoko</p>
-                <p>Email: <a href="mailto:theohmasoko2@gmail.com">theohmasoko2@gmail.com</a></p>
-                <p>Phone: <a href="tel:+26777748594">+267 77748594</a></p>
-            </div>
-            
+                <!-- Likes Section -->
+                <div class="likes">
+                    <button>👍</button><span>12</span>
+                </div>
             </div>
         </div>
-    </footer>
 
-    <script src="scripts.js"></script>
+        <!-- Advertisement Section -->
+        <div class="advertisement">
+            <a href="#">
+                <img src="photos/ad-banner2.jpg" alt="Advertisement">
+            </a>
+        </div>
+
+        <div class="forum-topic">
+            <h3>Dealing with pests in maize fields</h3>
+            <p>We're struggling with armyworms attacking our maize. What's the most effective pesticide to use?</p>
+            <p class="meta">Posted by FarmerJohn on July 9, 2024</p>
+
+            <!-- Comment Section -->
+            <div class="comment-section">
+                <h4>Comments</h4>
+                <textarea rows="3" placeholder="Add a comment..."></textarea>
+                <button class="btn-comment">Submit Comment</button>
+
+                <!-- Likes Section -->
+                <div class="likes">
+                    <button>👍</button><span>8</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Advertisement Section -->
+        <div class="advertisement">
+            <a href="#">
+                <img src="photos/ad-banner2.jpg" alt="Advertisement">
+            </a>
+        </div>
+
+        <div class="forum-topic">
+            <h3>Water management techniques for small farms</h3>
+            <p>Seeking advice on efficient irrigation methods for small-scale farming operations.</p>
+            <p class="meta">Posted by SmallFarmBigDreams on July 8, 2024</p>
+
+            <!-- Comment Section -->
+            <div class="comment-section">
+                <h4>Comments</h4>
+                <textarea rows="3" placeholder="Add a comment..."></textarea>
+                <button class="btn-comment">Submit Comment</button>
+
+                <!-- Likes Section -->
+                <div class="likes">
+                    <button>👍</button><span>15</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="forum-topic">
+            <h3>Organic vs. Synthetic Fertilizers</h3>
+            <p>What are the advantages and disadvantages of using organic fertilizers compared to synthetic ones? Share your experiences and tips.</p>
+            <p class="meta">Posted by GreenThumb on July 20, 2024</p>
+
+            <!-- Comment Section -->
+            <div class="comment-section">
+                <h4>Comments</h4>
+                <textarea rows="3" placeholder="Add a comment..."></textarea>
+                <button class="btn-comment">Submit Comment</button>
+
+                <!-- Likes Section -->
+                <div class="likes">
+                    <button>👍</button><span>22</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="forum-topic">
+            <h3>Best Practices for Soil Testing</h3>
+            <p>Looking for advice on how to perform soil tests and interpret the results effectively. What methods do you recommend?</p>
+            <p class="meta">Posted by SoilExpert on July 18, 2024</p>
+
+            <!-- Comment Section -->
+            <div class="comment-section">
+                <h4>Comments</h4>
+                <textarea rows="3" placeholder="Add a comment..."></textarea>
+                <button class="btn-comment">Submit Comment</button>
+
+                <!-- Likes Section -->
+                <div class="likes">
+                    <button>👍</button><span>18</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="forum-topic">
+            <h3>How to Manage Crop Rotation</h3>
+            <p>What are some effective strategies for managing crop rotation to maintain soil health and maximize yield?</p>
+            <p class="meta">Posted by CropMaster on July 15, 2024</p>
+
+            <!-- Comment Section -->
+            <div class="comment-section">
+                <h4>Comments</h4>
+                <textarea rows="3" placeholder="Add a comment..."></textarea>
+                <button class="btn-comment">Submit Comment</button>
+
+                <!-- Likes Section -->
+                <div class="likes">
+                    <button>👍</button><span>25</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="forum-topic">
+            <h3>Effective Pest Control Methods</h3>
+            <p>What pest control methods have you found to be most effective in your farming operations? Any organic options?</p>
+            <p class="meta">Posted by PestPatrol on July 12, 2024</p>
+
+            <!-- Comment Section -->
+            <div class="comment-section">
+                <h4>Comments</h4>
+                <textarea rows="3" placeholder="Add a comment..."></textarea>
+                <button class="btn-comment">Submit Comment</button>
+
+                <!-- Likes Section -->
+                <div class="likes">
+                    <button>👍</button><span>30</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="forum-topic">
+            <h3>Tips for Small Farm Marketing</h3>
+            <p>Looking for strategies to market produce from a small farm effectively. Any tips or success stories?</p>
+            <p class="meta">Posted by MarketGuru on July 5, 2024</p>
+
+            <!-- Comment Section -->
+            <div class="comment-section">
+                <h4>Comments</h4>
+                <textarea rows="3" placeholder="Add a comment..."></textarea>
+                <button class="btn-comment">Submit Comment</button>
+
+                <!-- Likes Section -->
+                <div class="likes">
+                    <button>👍</button><span>12</span>
+                </div>
+            </div>
+        </div>
+
+
+        <a href="#" class="btn">Visit Forum</a>
+    </div>
+</section>
+<footer>
+    <div class="container">
+        <p>&copy; 2024 Agricultural Information Portal - Botswana. All rights reserved.</p>
+        <p><a href="privacy.html">Privacy Policy</a></p>
+        <div class="developer-contact">
+            <h3>Developer Contact Details</h3>
+            <p>Names: Theo Masoko</p>
+            <p>Email: <a href="mailto:theohmasoko2@gmail.com">theohmasoko2@gmail.com</a></p>
+            <p>Phone: <a href="tel:+26777748594">+267 77748594</a></p>
+        </div>
+    </div>
+</footer>
+
+<script src="scripts.js"></script>
 </body>
 </html>

@@ -79,7 +79,27 @@
             margin: 100px;
         }
 
+
+        .ads {
+            margin: 20px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            background-color: #f9f9f9;
+            text-align: center;
+        }
+
+        .ads img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 8px;
+        }
+
         @media (max-width: 768px) {
+
+            .ads img {
+                max-width: 100%; /* Ensure ads fit the mobile view */
+            }
+
             #success-stories {
                 margin: 20px; /* Reduce the margin for mobile view */
                 padding: 10px; /* Add padding for better readability */
@@ -131,7 +151,13 @@
         <div class="container">
             <h2>Success Stories</h2>
             <p>Be inspired by stories of successful farmers using modern techniques.</p>
-    
+
+            <!-- Ad Section -->
+            <div class="ads">
+                <h3>Sponsored Ad</h3>
+                <a href="#"><img src="photos/ad1.jpg" alt="Sponsored Ad"></a>
+            </div>
+
             <!-- Thabo's Story -->
             <div class="story">
                 <h3>Thandi's Maize Farm in Serowe</h3>
@@ -143,7 +169,7 @@
                 <p>Thandi, a dedicated farmer from Serowe, struggled for years with low maize yields due to erratic weather patterns. Determined to improve, Thandi attended a workshop on modern farming techniques organized by the Agricultural Information Portal in January 2023. She learned about precision agriculture and how to utilize weather data for better crop management. Using the portal's weather updates and precision farming tips, Thandi implemented drip irrigation and adopted a soil health monitoring system in March 2023. She also started rotating her crops to maintain soil fertility. By March 2024, Thandi's maize yields had doubled, providing enough surplus to sell in the local market. Thandi's success story inspired other farmers in Serowe to adopt modern techniques. Her farm became a model for sustainable farming practices, and Thandi now mentors young farmers, helping them achieve similar success.</p>
                 <a href="thabo-story.html" class="learn-more-button">Learn More</a>
             </div>
-    
+
             <!-- Naledi's Story -->
             <div class="story">
                 <h3>Naledi's Organic Vegetable Garden in Maun</h3>
@@ -155,7 +181,7 @@
                 <p>Naledi, a young entrepreneur from Maun, wanted to start an organic vegetable garden. However, she faced challenges with pest management and soil quality. She turned to the Agricultural Information Portal for guidance and found extensive resources on organic farming techniques. With the portal's information, Naledi began composting to enrich her soil and used natural pest repellents. She also planted a variety of vegetables to ensure a continuous harvest throughout the year. The portal's expert chat feature provided her with real-time advice whenever she encountered issues. Naledi's organic garden flourished, and she began supplying fresh vegetables to local restaurants and markets. Her commitment to organic farming not only brought her financial success but also promoted healthy eating in her community. Naledi's story encouraged other farmers in Maun to consider organic practices.</p>
                 <a href="naledi-story.html" class="learn-more-button">Learn More</a>
             </div>
-    
+
             <!-- Kgosi's Story -->
             <div class="story">
                 <h3>Kgosi's Livestock Farm in Ghanzi</h3>
@@ -178,6 +204,12 @@
                 </div>
                 <p>Dineo, an innovative farmer in Francistown, faced challenges with high mortality rates in her poultry due to inconsistent feeding and disease outbreaks. She turned to the Agricultural Information Portal for solutions and discovered the benefits of automated feeding systems and biosecurity measures. Dineo invested in an automated feeding system that ensured her chickens received consistent nutrition. She also implemented strict biosecurity protocols to prevent disease. With these changes, her poultry's health improved significantly, leading to higher egg production and lower mortality rates. Dineo's success in poultry farming has made her a role model in Francistown, and she now conducts workshops to share her knowledge with other poultry farmers.</p>
                 <a href="dineo-story.html" class="learn-more-button">Learn More</a>
+            </div>
+
+            <!-- Ad Section -->
+            <div class="ads">
+                <h3>Sponsored Ad</h3>
+                <a href="#"><img src="photos/ad1.jpg" alt="Sponsored Ad"></a>
             </div>
 
             <!-- Keabetswe's Story -->
@@ -206,6 +238,12 @@
         </div>
     </section>
 
+    <!-- Ad Section -->
+    <div class="ads">
+        <h3>Sponsored Ad</h3>
+        <a href="#"><img src="photos/ad1.jpg" alt="Sponsored Ad"></a>
+    </div>
+
     <section id="submit-story">
         <div class="container">
             <h2>Submit Your Success Story</h2>
@@ -223,7 +261,7 @@
                 <p>Email: <a href="mailto:theohmasoko2@gmail.com">theohmasoko2@gmail.com</a></p>
                 <p>Phone: <a href="tel:+26777748594">+267 77748594</a></p>
             </div>
-            
+
             </div>
         </div>
     </footer>

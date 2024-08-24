@@ -32,6 +32,12 @@
             font-size: 0.9em;
             color: #333;
         }
+
+
+        .search-results {
+            margin-top: 20px;
+        }
+
     </style>
 
 </head>
@@ -50,10 +56,40 @@
                 <li><a href="forum.html">Forum</a></li>
                 <li><a href="resources.html">Resources</a></li>
             </ul>
-            <form class="search-form" action="search.html" method="GET">
-                <input type="text" name="query" placeholder="Search...">
+            <form class="search-form" onsubmit="return performSearch()">
+                <input type="text" id="searchQuery" placeholder="Search...">
                 <button type="submit">Search</button>
             </form>
+
+            <div id="searchResults" class="search-results"></div>
+
+            <script>
+                function performSearch() {
+                    // Get the search query
+                    const query = document.getElementById('searchQuery').value.toLowerCase();
+
+                    // Define some sample data (keywords) and responses
+                    const data = {
+                        'tomato': 'Learn more about tomato cultivation best practices.',
+                        'maize': 'Find out how to deal with pests in maize fields.',
+                        'irrigation': 'Discover efficient irrigation methods for small farms.',
+                        'fertilizers': 'Read about the benefits of organic vs. synthetic fertilizers.'
+                    };
+
+                    // Check if the query matches any keywords
+                    let resultMessage = 'No results found.';
+                    if (data[query]) {
+                        resultMessage = data[query];
+                    }
+
+                    // Display the result
+                    document.getElementById('searchResults').innerText = resultMessage;
+
+                    // Prevent form submission
+                    return false;
+                }
+            </script>
+
         </nav>
         <div class="menu-toggle">
             <div class="bar"></div>

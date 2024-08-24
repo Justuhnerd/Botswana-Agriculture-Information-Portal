@@ -115,7 +115,7 @@ header .search-form {
     border-radius: 10px;
 }
 
-* Search Form Styles */
+/* Search Form Styles */
 header .search-form {
     display: flex;
     align-items: center;
@@ -203,7 +203,7 @@ h1 {
     transition: background-color 0.3s ease-in-out;
     display: inline-block;
 }
-logo# a:hover {
+#logo a:hover {
     background-color: rgba(45, 39, 39, 0.3);
 }
 #logo a span {
@@ -462,6 +462,24 @@ form button {
     width: 100%;
     padding: 10px;
     margin-top: 5px
+}
+
+/* ads*/
+
+.ads {
+    background-color: #f9f9f9; /* Light gray background */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin: 20px 0;
+    padding: 10px;
+    border: 2px solid #4CAF50; /* Green border */
+    text-align: center;
+}
+
+.ads img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 8px;
 }
 
 

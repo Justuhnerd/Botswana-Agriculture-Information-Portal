@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup - Agricultural Information Portal</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        .signup-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        .btn-submit {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .btn-submit:hover {
+            background-color: #45a049;
+        }
+
+        .captcha {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="signup-container">
+    <h2>Premium Account Signup</h2>
+    <form id="signupForm" method="POST">
+        <!-- Personal Information -->
+        <label for="fullName">Full Name:</label>
+        <input type="text" id="fullName" name="fullName" required>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="text" id="phone" name="phone" required>
+
+        <!-- Address Information -->
+        <label for="streetAddress">Street Address:</label>
+        <input type="text" id="streetAddress" name="streetAddress" required>
+
+
+
+        <label for="state">Districts:</label>
+        <select id="state" name="state">
+            <option value="" disabled selected>Select your district</option>
+            <option value="Boteti">Boteti</option>
+            <option value="Francistown">Francistown</option>
+            <option value="Gaborone">Gaborone</option>
+            <option value="Ghanzi">Ghanzi</option>
+            <option value="Hukuntsi">Hukuntsi</option>
+            <option value="Jwaneng">Jwaneng</option>
+            <option value="Kasane">Kasane</option>
+            <option value="Kanye">Kanye</option>
+            <option value="Kgalagadi">Kgalagadi</option>
+            <option value="Letlhakane">Letlhakane</option>
+            <option value="Lobatse">Lobatse</option>
+            <option value="Maun">Maun</option>
+            <option value="Mahalapye">Mahalapye</option>
+            <option value="Ngami">Ngami</option>
+            <option value="Palapye">Palapye</option>
+            <option value="Selibe Phikwe">Selibe Phikwe</option>
+            <option value="Tsabong">Tsabong</option>
+        </select>
+
+
+        <label for="country">Country:</label>
+        <input type="text" id="country" name="country" >
+
+        <!-- Business Information -->
+        <label for="businessName">Business Name (if Applicable):</label>
+        <input type="text" id="businessName" name="businessName">
+
+        <label for="businessType">Business Type:</label>
+        <input type="text" id="businessType" name="businessType">
+
+        <label for="farmSize">Farm Size:</label>
+        <input type="text" id="farmSize" name="farmSize">
+
+        <label for="products">Products/Services Offered:</label>
+        <input type="text" id="products" name="products">
+
+        <label for="certifications">Certifications:</label>
+        <input type="text" id="certifications" name="certifications">
+
+        <!-- Login Credentials -->
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" required>
+
+        <label for="areasOfInterest">Areas of Interest:</label>
+        <select id="areasOfInterest" name="areasOfInterest">
+            <option value="" disabled selected>Select your area of interest</option>
+            <option value="Agroforestry">Agroforestry</option>
+            <option value="Aquaculture">Aquaculture</option>
+            <option value="Beekeeping">Beekeeping</option>
+            <option value="Crop Farming">Crop Farming</option>
+            <option value="Greenhouse Farming">Greenhouse Farming</option>
+            <option value="Hydroponics">Hydroponics</option>
+            <option value="Horticulture">Horticulture</option>
+            <option value="Livestock Farming">Livestock Farming</option>
+            <option value="Organic Farming">Organic Farming</option>
+            <option value="Permaculture">Permaculture</option>
+            <option value="Poultry Farming">Poultry Farming</option>
+            <option value="Sustainable Agriculture">Sustainable Agriculture</option>
+            <option value="Viticulture">Viticulture</option>
+        </select>
+
+        <!-- How did you hear about us? -->
+        <label for="howDidYouHear">How did you hear about us?</label>
+        <select id="howDidYouHear" name="howDidYouHear">
+            <option value="" disabled selected>Select an option</option>
+            <option value="Social Media">Social Media</option>
+            <option value="Friend/Family">Friend/Family</option>
+            <option value="Online Advertisement">Online Advertisement</option>
+            <option value="Search Engine">Search Engine</option>
+            <option value="Event/Conference">Event/Conference</option>
+            <option value="Email Newsletter">Email Newsletter</option>
+            <option value="Other">Other</option>
+        </select>
+
+        <label>Subscribe to newsletters:</label>
+        <input type="checkbox" id="subscribeYes" name="subscribeYes" value="Yes"> Yes
+        <input type="checkbox" id="subscribeNo" name="subscribeNo" value="No"> No
+
+        <!-- Security Verification -->
+        <div class="captcha">
+            <label for="captcha">Please complete the CAPTCHA:</label>
+            <input type="text" id="captcha" name="captcha" >
+        </div>
+
+        <!-- Agreement -->
+        <label>
+            <input type="checkbox" name="agree" required> I agree to the <a href="terms.html" target="_blank">Terms and Conditions</a>
+        </label>
+        <label>
+            <input type="checkbox" name="consent" required> I consent to the <a href="privacy.html" target="_blank">Privacy Policy</a>
+        </label>
+
+        <button type="submit" class="btn-submit">Sign Up</button>
+    </form>
+</div>
+
+
+<script>
+    function filterDistricts() {
+        const input = document.getElementById('searchDistrict');
+        const filter = input.value.toLowerCase();
+        const select = document.getElementById('state');
+        const options = select.getElementsByTagName('option');
+
+        for (let i = 1; i < options.length; i++) { // Skip the first option
+            const text = options[i].textContent || options[i].innerText;
+            options[i].style.display = text.toLowerCase().includes(filter) ? '' : 'none';
+        }
+    }
+</script>
+
+<script src="scripts.js"></script>
+</body>
+</html>

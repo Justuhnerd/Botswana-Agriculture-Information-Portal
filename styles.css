@@ -483,5 +483,24 @@ form button {
 }
 
 
+.inline-ad {
+    border: 2px solid #4CAF50; /* Green border */
+    padding: 10px;
+    margin: 15px 0;
+    background-color: #f9f9f9; /* Light gray background */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
 
+.inline-ad h3 {
+    margin: 0 0 10px;
+    color: #2c6d2c; /* Darker green for the ad title */
+    font-size: 1.2em;
+}
+
+.inline-ad p {
+    margin: 0;
+    font-size: 0.9em;
+    color: #333;
+}
 

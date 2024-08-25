@@ -91,3 +91,20 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+
+//
+// function toggleTheme() {
+//     const body = document.body;
+//     const button = document.getElementById('themeToggle');
+//
+//     // Toggle the dark-mode class on the body element
+//     body.classList.toggle('dark-mode');
+//
+//     // Update the button text
+//     if (body.classList.contains('dark-mode')) {
+//         button.textContent = 'Switch to Light Mode';
+//     } else {
+//         button.textContent = 'Switch to Dark Mode';
+//     }
+// }

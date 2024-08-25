@@ -504,3 +504,40 @@ form button {
     color: #333;
 }
 
+
+
+
+
+/*!* Default to light mode *!*/
+/*:root {*/
+/*    --background-color: #f4f4f4;*/
+/*    --text-color: #333;*/
+/*    --ad-background-color: #4CAF50;*/
+/*    --ad-text-color: white;*/
+/*    --hover-shadow: rgba(0, 0, 0, 0.2);*/
+/*}*/
+
+/*body {*/
+/*    background-color: var(--background-color);*/
+/*    color: var(--text-color);*/
+/*}*/
+
+/*.inline-ad {*/
+/*    background-color: var(--ad-background-color);*/
+/*    color: var(--ad-text-color);*/
+/*}*/
+
+/*.inline-ad:hover {*/
+/*    box-shadow: 0 8px 12px var(--hover-shadow);*/
+/*}*/
+
+/*!* Dark mode *!*/
+/*body.dark-mode {*/
+/*    --background-color: #1e1e1e;*/
+/*    --text-color: #f4f4f4;*/
+/*    --ad-background-color: #333;*/
+/*    --ad-text-color: #4CAF50;*/
+/*    --hover-shadow: rgba(255, 255, 255, 0.2);*/
+/*}*/
+
+
